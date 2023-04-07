@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            .menu{
+                float: right;
+            }
+            .menu li{
+                display: inline;
+            }
+            a{
+                text-decoration: none;
+                margin: 10px;
+                font-size: 18px;
+            }
+            #menuSmall{
+                float: right;
+            }
+            /* điện thoại dọc */
+            @media all and (min-width: 240px){
+                .menu {
+                    display: none;
+                }
+                .menu li {
+                    width: 100%;
+                    display: inline-block;
+                    
+                }
+            }
+            @media all and (min-width: 576px){
+                .menu {
+                    display: block;
+                }
+                #menuSmall {
+                    display: none;
+                }
+                .menu li {
+                    display: inline;
+                    margin-left: 15px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="https://fpt.edu.vn/Content/images/assets/Poly.png" height="70%" width="20%">
+        <i onclick="showMenu()" id="menuSmall" class="fa fa-bars" style="font-size:24px"></i>
+        <ul id="menuBig" class="menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tin tức</a></li>
+        </ul>
+        <img class="banner" src="https://caodang.fpt.edu.vn/wp-content/uploads/z4177663451259_416a321a403a996ecee9d1e777497364.jpg" width="100%" >
+        
+        <script>
+            function showMenu(){
+                if(document.getElementById('menuBig').style.display=='none'){
+                    document.getElementById('menuBig').style.display='block';
+                }else{
+                    document.getElementById('menuBig').style.display='none';
+                }
+            }
+        </script>
+        
+    </body>
+</html>
